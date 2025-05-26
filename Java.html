@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Our Planet</title>
+    
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #2c3e50, #3498db);
+        color: white;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 3ram;
+        font-weight: bold;
+    }
+    h2 {font-size: 2rem;
+        font-weight: lighter
+    }
+    
+    strong {
+        font-weight: bold;
+        color: #e74c3c;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    hr {margin: 20px 0;
+        border: 0;
+        border-top: 2px solid #ccc;
+
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin: 10px 0;
+    }
+
+   button{
+    background-color: #2ecc71;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+   }
+   
+   button:hover {background-color: #27ae60;
+    background-color: #27ae60;
+    transform: scale(1.05)
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+a {
+    color: #f1c40f;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e67e22;
+}
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>Save Our Planet</h1>
+    <h2>Take action today for a better tomorrow!</h2>
+    <p>We all have a responsibility to protect our environment. Whether it's reducing waste, conserving energy, or supporting sustainable practices, every step counts in preserving the Earth for future generations.</p>
+    <hr>
+    <p><strong>Join the movement today!</strong></p>
+    <p>Let's work together for a sustainable future.</p>
+
+
+    <button id="actionButton">Take Action Now!</button>
+    
+    <div class="image-container">
+        <img src="https://www.w3schools.com/w3images/forest.jpg" alt="Beautiful green forest">
+        </div>
+        
+        <p><span>Are you ready to make a difference?</span></p>
+        <p><em>Your action matters!</em></p>
+        <div>
+            <a href="https://www.climaterealityproject.org" target="_blank">Learn more about the Climate Reality Project</a>
+        </div>
+     </div> 
+
+     <script>
+        document.getElementById('actionButton').addEventListener('click', function() {
+        let userName = prompt("What's your name?");
+        if (userName) {
+        alert("Thank you, " + userName + "! You're taking the first step to make a difference!");
+    } else {
+        alert("No name entered. Please, join the movement!");
+    }
+    });
+    </script>
+</body>
+</html>
