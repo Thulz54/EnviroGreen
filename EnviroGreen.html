@@ -129,6 +129,58 @@ Saturday 7:18, sunny
 <div>☀️ 8°C</div>
 </main>
 <footer>
+
+<script>
+    const apiKey = "fbf2o208f95abce4a34t1e1f397a64a5";
+
+    // 1. Handle form submit
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const city = getCityInput();
+      if (!city) {
+        alert("Please enter a city.");
+        return;
+      }
+      fetchWeatherData(city);
+    }
+
+    // 2. Get user input
+    function getCityInput() {
+      return document.querySelector("input[type='search']").value.trim();
+    }
+
+function fetchWeatherData(city) {
+      const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+      // Optional: show loading
+      document.querySelector("main").innerHTML = `<div>Loading weather for "${city}"...</div>`;
+
+      axios.get(apiUrl)
+        .then(displayWeather)
+        .catch(handleError);
+    }
+
+function displayWeather(response) {
+      const weather = response.data;
+
+      document.querySelector("main").innerHTML = `
+        <div><strong>${weather.city}</strong>, ${weather.country}</div>
+        <div>${weather.condition.description}</div>
+        <div><img src="${weather.condition.icon_url}" alt="${weather.condition.description}" /></div>
+        <div>🌡 Temp: ${weather.temperature.current}°C</div>
+        <div>💧 Humidity: ${weather.temperature.humidity}%</div>
+        <div>🌬 Wind: ${weather.wind.speed} km/h</div>
+      `;
+    }
+
+function handleError(error) {
+      console.error("API Error:", error);
+      document.querySelector("main").innerHTML = `<div>City not found. Please try again.</div>`;
+    }
+
+    // 6. Add event listener
+    document.querySelector("form").addEventListener("submit", handleFormSubmit);
+  </script>
 <p>
 This project was coded by
             
