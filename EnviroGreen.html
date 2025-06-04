@@ -163,8 +163,18 @@ function fetchWeatherData(city) {
 function displayWeather(response) {
       const weather = response.data;
 
+const timestamp = weather.time * 1000;
+      const timezoneOffset = weather.timezone * 1000;
+      const localTime = new Date(timestamp + timezoneOffset - new Date().getTimezoneOffset() * 60000);
+
+      const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      const formattedDate = localTime.toLocaleDateString(undefined, dateOptions);
+      const formattedTime = localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
       document.querySelector("main").innerHTML = `
         <div><strong>${weather.city}</strong>, ${weather.country}</div>
+<div><em>${formattedDate} - ${formattedTime}</em></div>
+
         <div>${weather.condition.description}</div>
         <div><img src="${weather.condition.icon_url}" alt="${weather.condition.description}" /></div>
         <div>🌡 Temp: ${weather.temperature.current}°C</div>
