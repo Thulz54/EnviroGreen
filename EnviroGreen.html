@@ -3,90 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Save Our Planet</title>
+    <title>Weather Forecast App</title>
     
     <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to right, #2c3e50, #3498db);
-        color: white;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        text-align: center;
-    }
 
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 3ram;
-        font-weight: bold;
-    }
-    h2 {font-size: 2rem;
-        font-weight: lighter
-    }
-    
-    strong {
-        font-weight: bold;
-        color: #e74c3c;
-    }
-
-    em {
-        font-style: italic;
-    }
-
-    hr {margin: 20px 0;
-        border: 0;
-        border-top: 2px solid #ccc;
-
-    }
-
-    p {
-        font-size: 1.1rem;
-        margin: 10px 0;
-    }
-
-   button{
-    background-color: #2ecc71;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-   }
-   
-   button:hover {background-color: #27ae60;
-    background-color: #27ae60;
-    transform: scale(1.05)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.image-container img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to top right, #fefcea, #f1da36);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-a {
-    color: #f1c40f;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
+header {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-a:hover {
-    color: #e67e22;
+header h1 {
+  font-size: 2rem;
+  color: #0e4d92;
+  margin-bottom: 10px;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="search"] {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #0e4d92;
+  border-radius: 8px;
+  width: 220px;
+}
+
+input[type="submit"] {
+  background-color: #0e4d92;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #072f5f;
+}
+
+main {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+main div {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: auto;
+  color: #555;
+}
+
+footer a {
+  color: #0e4d92;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 
  </style>
- <h1>title>Weather search App</h1>
+
 </head>
 <body>
 <header>
